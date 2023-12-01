@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 272px;
-    width: 100vw;
+    width: 100%;
     background-color: var(--css-black);
 }
 
@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     color: var(--css-white);
+    text-align: center;
 }
 
 .hs-img-frame{

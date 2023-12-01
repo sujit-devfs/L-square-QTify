@@ -1,20 +1,24 @@
 
 import "./card.css";
 
-export default ()  => {
+export default ({
+    imgSrc,
+    followersCount,
+    label
+})  => {
     return(
       <div className="card-wrapper">
         <div className="card">
             <div className="card-img-frame">
-                <img src="https://images.pexels.com/photos/1619779/pexels-photo-1619779.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800"/>
+                <img src={imgSrc}/>
             </div>
               <div className="card-content">
                 <span className="card-content-pill">
-                    100 follows
+                    {followersCount} follows
                 </span>
             </div>
         </div>
-        <p className="card-label">New Bollywood</p>
+        <p className="card-label">{label}</p>
       </div>
     )
 }
