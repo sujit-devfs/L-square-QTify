@@ -15,3 +15,15 @@
     column-gap: 42px;
     row-gap: 10px;
 }
+
+.section-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-toggle-btn{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--css-primary);
+    cursor: pointer;
+}

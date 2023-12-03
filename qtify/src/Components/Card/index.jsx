@@ -1,7 +1,7 @@
 
 import "./card.css";
 
-export default ({
+const Card = ({
     imgSrc,
     followersCount,
     label
@@ -22,3 +22,5 @@ export default ({
       </div>
     )
 }
+
+export default Card;

@@ -28,8 +28,8 @@ axios.get(`${ENDPOINT}albums/new`)
     <>
     <NavBar />
     <HeroSection />
-    <Section title="Top Albums" data={topAlbums}/>
-    <Section title="New Albums" data={newAlbums}/>
+    <Section navId="ta" title="Top Albums" data={topAlbums}/>
+    {/* <Section navId="na" title="New Albums" data={newAlbums}/> */}
     </> 
   );
 }

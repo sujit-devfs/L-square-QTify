@@ -1,6 +1,6 @@
 import "./herosection.css";
 
-export default () => {
+ const HeroSection = () => {
     return(
         <div className="hs-container">
             <div className="hs-content">
@@ -15,3 +15,5 @@ export default () => {
         </div>
     )
 }
+
+export default HeroSection;
