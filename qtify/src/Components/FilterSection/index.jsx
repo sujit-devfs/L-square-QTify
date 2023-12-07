@@ -17,8 +17,8 @@ const FilterSection = ({ title, data, navId, filters, executeFilter }) => {
   <Tabs 
   value={selectedTab}
   onChange={(e,value) => {
-    setSelectedTab(value);
     executeFilter(filters[value].key);
+    setSelectedTab(value);  
   }}
   TabIndicatorProps={{
     style: {

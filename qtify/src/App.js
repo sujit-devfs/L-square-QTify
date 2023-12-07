@@ -6,6 +6,7 @@ import HeroSection from './Components/HeroSection';
 import NavBar from './Components/NavBar';
 import Section from './Components/Section';
 import FilterSection from './Components/FilterSection';
+import AccordionFaq from './Components/AccordionFaq';
 
 
 const ENDPOINT = "https://qtify-backend-labs.crio.do/";
@@ -17,6 +18,7 @@ const [newAlbums, setNewAlbums] = useState([]);
 const [songs, setSongs] = useState([]);
 const [filteredSongs, setFilteredSongs] = useState([]);
 const [genres, setGenres] = useState([]);
+const [faq, setFaq] = useState([]);
 
 useEffect(() => {
   axios.get(`${ENDPOINT}albums/top`)
@@ -30,11 +32,15 @@ axios.get(`${ENDPOINT}albums/new`)
 axios.get(`${ENDPOINT}songs`)
   .then(({data}) => {
     setSongs(data);
-    setFilteredSongs(songs);
+    setFilteredSongs(data);
 })
 axios.get(`${ENDPOINT}genres`)
   .then(({data}) => {
     setGenres([{"key":"all","label":"all"},...data.data]);
+})
+axios.get(`${ENDPOINT}faq`)
+  .then(({data}) => {
+    setFaq(data.data);
 })
 }, [])
   return (
@@ -52,6 +58,7 @@ axios.get(`${ENDPOINT}genres`)
       }
     }}
     />
+    <AccordionFaq title="FAQs" data={faq}/>
     </> 
   );
 }

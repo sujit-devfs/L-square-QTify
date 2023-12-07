@@ -9,7 +9,11 @@ import 'swiper/css/navigation';
 import "./carousel.css";
 import Card from "../Card";
 
-function Carousel({ navId,data }) {
+function Carousel({ navId, data }) {
+
+  // console.log(data,"carousel");
+  // console.log(typeof data.songs,"carousel");
+
   return (
     <div className='carousel-container'>
     <Swiper
@@ -31,7 +35,9 @@ function Carousel({ navId,data }) {
                     imgSrc={cardData.image}
                     label={cardData.title}
                     followersCount={cardData.follows}
-                /></SwiperSlide>)}  
+                    songCount={cardData.length}
+                /></SwiperSlide>
+                )}  
         
       </Swiper>
 

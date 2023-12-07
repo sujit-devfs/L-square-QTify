@@ -6,6 +6,8 @@ import Carousel from "../Carousel"
 
 const Section = ({ navId, title, data }) => {
 
+    // console.log(data,"section");
+
     const [isCollapsed, setIsCollapsed] = useState(false);
     return(
         <div className="section">
@@ -17,12 +19,13 @@ const Section = ({ navId, title, data }) => {
                 }}>{isCollapsed ? 'Show All' : 'Collapse'}</h1>
             </div>
             
-            {isCollapsed ? <Carousel navId={navId} data={data} /> : <div className="card-container">
+            {isCollapsed ? <Carousel navId={navId} data={data}  /> : <div className="card-container">
                 {data.map(cardData => <Card
                     key={cardData.id}
                     imgSrc={cardData.image}
                     label={cardData.title}
                     followersCount={cardData.follows}
+                    songCount={cardData.songs.length}
                 />)}
             </div>}   
         </div>

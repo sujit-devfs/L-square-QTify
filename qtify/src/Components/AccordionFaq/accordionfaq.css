@@ -1,0 +1,15 @@
+.faq-list{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.faq-title{
+    font-size: 20px;
+    text-align: center;
+    color: var(--css-white);
+    margin-bottom: 10px;
+}
+
+
+
