@@ -26,7 +26,6 @@ const AccordionFaq = ({
         borderRadius: 'lg',
         [`& .${accordionSummaryClasses.button}`]: {
           color: 'white',
-          marginBottom: '10px'
         },
         [`& .${accordionDetailsClasses.content}`]: {
           boxShadow: (theme) => `inset 0 1px ${theme.vars.palette.divider}`,
